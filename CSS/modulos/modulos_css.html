@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos de CSS - Estudo Completo</title>
+    <link rel="stylesheet" href="/CSS/modulos/modulos_css.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-conteudo">
+            <h1>Estudo de Módulos de CSS</h1>
+            <p>Seletores avançados, herança, barras de navegação, layouts, tabelas, formulários, parallax, fontes customizadas e mais.</p>
+
+            <nav class="menu">
+                <a href="#seletores">Seletores avançados</a>
+                <a href="#heranca-especificidade">Herança e especificidade</a>
+                <a href="#nav-vertical">Nav vertical</a>
+                <a href="#pagina-atual">Página atual</a>
+                <a href="#nav-horizontal">Nav horizontal</a>
+                <a href="#abas">Abas</a>
+                <a href="#layout-fixo">Layout fixo</a>
+                <a href="#layout-liquido">Layout líquido</a>
+                <a href="#imagens-liquidas">Imagens líquidas</a>
+                <a href="#coluna-falsa">Coluna falsa</a>
+                <a href="#tabelas">Tabelas</a>
+                <a href="#formularios">Formulários</a>
+                <a href="#arredondamento">Arredondamento</a>
+                <a href="#projeto-noticias">Projeto Notícias</a>
+                <a href="#projeto-chale">Projeto Chalé</a>
+                <a href="#parallax">Parallax</a>
+                <a href="#fontes">Fontes customizadas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. Mais sobre seletores -->
+        <section id="seletores" class="bloco">
+            <h2>Mais sobre seletores</h2>
+            <p>Exemplos de seletores avançados: atributos, pseudo-classes e pseudo-elementos.</p>
+
+            <div class="demo-seletores">
+                <a href="https://exemplo.com/login" class="link-exemplo">Link que contém "login"</a>
+                <a href="https://exemplo.com/arquivo.pdf" class="link-exemplo">Link que termina com ".pdf"</a>
+                <input type="text" placeholder="type='text' é selecionado" class="input-exemplo">
+                <p class="texto-seletor">Passe o mouse aqui para ver pseudo-classes.</p>
+                <p class="texto-before-after">Texto com ::before e ::after.</p>
+            </div>
+        </section>
+
+        <!-- 2. Herança e especificidade -->
+        <section id="heranca-especificidade" class="bloco">
+            <h2>Herança e especificidade</h2>
+            <p>O texto abaixo mostra herança de cor e o efeito de diferentes níveis de especificidade.</p>
+
+            <div class="caixa-heranca">
+                <p>Este parágrafo herda a cor do elemento pai.</p>
+                <p class="filho-especial">Este parágrafo possui uma classe que altera a cor.</p>
+                <p id="filho-id">Este parágrafo usa um id, que tem mais peso na especificidade.</p>
+                <p style="color: red;">Este parágrafo usa estilo inline, com maior prioridade.</p>
+            </div>
+        </section>
+
+        <!-- 3. Barra de navegação vertical -->
+        <section id="nav-vertical" class="bloco">
+            <h2>Criando barra de navegação vertical</h2>
+            <p>Exemplo de menu lateral vertical.</p>
+
+            <div class="nav-vertical">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Esportes</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. Marcando página atual -->
+        <section id="pagina-atual" class="bloco">
+            <h2>Marcando página atual</h2>
+            <p>Exemplo de navegação onde a página atual está marcada com uma classe especial.</p>
+
+            <nav class="nav-horizontal">
+                <a href="#" class="ativo">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </nav>
+        </section>
+
+        <!-- 5. Barra de navegação horizontal -->
+        <section id="nav-horizontal" class="bloco">
+            <h2>Criando barra de navegação horizontal</h2>
+            <p>Menu alinhado em linha usando display flex.</p>
+
+            <nav class="nav-horizontal nav-horizontal-exemplo">
+                <a href="#">Notícias</a>
+                <a href="#">Política</a>
+                <a href="#">Tecnologia</a>
+                <a href="#">Economia</a>
+                <a href="#">Entretenimento</a>
+            </nav>
+        </section>
+
+        <!-- 6. Navegação com abas -->
+        <section id="abas" class="bloco">
+            <h2>Navegação com abas</h2>
+            <p>Abaixo um exemplo visual de abas. Aqui é apenas visual (não troca conteúdo via JavaScript).</p>
+
+            <div class="abas">
+                <div class="abas-titulo">
+                    <button class="aba ativa">Aba 1</button>
+                    <button class="aba">Aba 2</button>
+                    <button class="aba">Aba 3</button>
+                </div>
+                <div class="abas-conteudo">
+                    <p>Conteúdo demonstrativo da aba 1. Em um projeto real, cada aba mostraria um conteúdo diferente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Layout de largura fixa -->
+        <section id="layout-fixo" class="bloco">
+            <h2>Layout de largura fixa</h2>
+            <p>Este exemplo mostra um container com largura fixa no centro da tela.</p>
+
+            <div class="layout-fixo">
+                <header>Topo do site (fixo)</header>
+                <section>Conteúdo principal com largura fixa.</section>
+                <footer>Rodapé fixo.</footer>
+            </div>
+        </section>
+
+        <!-- 8. Layout líquido -->
+        <section id="layout-liquido" class="bloco">
+            <h2>Layout líquido</h2>
+            <p>O layout abaixo usa larguras em porcentagem para se adaptar ao tamanho da tela.</p>
+
+            <div class="layout-liquido">
+                <aside>Barra lateral (25%)</aside>
+                <section>Conteúdo principal (75%)</section>
+            </div>
+        </section>
+
+        <!-- 9. Imagens líquidas -->
+        <section id="imagens-liquidas" class="bloco">
+            <h2>Imagens líquidas</h2>
+            <p>Imagens que se adaptam ao tamanho do container mantendo proporção.</p>
+
+            <div class="linha-imagens">
+                <div class="foto-box">
+                    <div class="foto-liquida"></div>
+                    <p>Imagem responsiva 1 (simulada com background).</p>
+                </div>
+                <div class="foto-box">
+                    <div class="foto-liquida"></div>
+                    <p>Imagem responsiva 2 (simulada com background).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Coluna falsa -->
+        <section id="coluna-falsa" class="bloco">
+            <h2>Coluna falsa</h2>
+            <p>Antiga técnica para simular colunas de altura igual usando o fundo do container. Aqui representado visualmente.</p>
+
+            <div class="coluna-falsa">
+                <div class="coluna esquerda">
+                    <p>Conteúdo da coluna esquerda.</p>
+                    <p>Altura variável.</p>
+                </div>
+                <div class="coluna direita">
+                    <p>Conteúdo da coluna direita.</p>
+                </div>
+            </div>
+            <p class="nota">O fundo do container cria a ilusão de colunas com mesma altura.</p>
+        </section>
+
+        <!-- 11. Estilizando tabelas -->
+        <section id="tabelas" class="bloco">
+            <h2>Estilizando tabelas</h2>
+            <p>Exemplo de tabela com cabeçalho destacado, listras e hover nas linhas.</p>
+
+            <table class="tabela-estilizada">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Título</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10/05/2025</td>
+                        <td>Mercado de Tecnologia em Alta</td>
+                        <td>Tecnologia</td>
+                    </tr>
+                    <tr>
+                        <td>11/05/2025</td>
+                        <td>Novas Medidas Econômicas</td>
+                        <td>Economia</td>
+                    </tr>
+                    <tr>
+                        <td>12/05/2025</td>
+                        <td>Clássico termina empatado</td>
+                        <td>Esportes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 12. Estilizando formulários -->
+        <section id="formularios" class="bloco">
+            <h2>Estilizando formulários</h2>
+            <p>Exemplo de formulário com campos estilizados e foco visual.</p>
+
+            <form class="form-estilizado">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seuemail@exemplo.com">
+
+                <label for="assunto">Assunto</label>
+                <select id="assunto">
+                    <option>Dúvida</option>
+                    <option>Sugestão</option>
+                    <option>Suporte</option>
+                </select>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- 13. Arredondamento com imagens (adaptado) -->
+        <section id="arredondamento" class="bloco">
+            <h2>Arredondamento com imagens</h2>
+            <p>Antigamente, cantos arredondados eram feitos com imagens. Hoje usamos border-radius, mas o conceito é similar.</p>
+
+            <div class="caixa-arredondada">
+                <p>Caixa com cantos arredondados simulando antigos layouts com imagens.</p>
+            </div>
+        </section>
+
+        <!-- 14. Projeto 4 - Site de Notícias Cidade (versão mini) -->
+        <section id="projeto-noticias" class="bloco">
+            <h2>Projeto Notícias Cidade (mini layout)</h2>
+            <p>Miniatura de um layout de site de notícias com topo, nav e colunas.</p>
+
+            <div class="noticias-layout">
+                <header class="noticias-topo">
+                    <h3>Notícias Cidade</h3>
+                </header>
+                <nav class="noticias-nav">
+                    <a href="#">Início</a>
+                    <a href="#">Cidade</a>
+                    <a href="#">Política</a>
+                    <a href="#">Esportes</a>
+                    <a href="#">Contato</a>
+                </nav>
+                <div class="noticias-corpo">
+                    <section class="noticias-principal">
+                        <h4>Manchete principal</h4>
+                        <p>Área principal de notícias.</p>
+                    </section>
+                    <aside class="noticias-lateral">
+                        <h4>Últimas notícias</h4>
+                        <ul>
+                            <li>Notícia 1</li>
+                            <li>Notícia 2</li>
+                            <li>Notícia 3</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. Projeto 5 - Chalé Hotel (versão mini) -->
+        <section id="projeto-chale" class="bloco">
+            <h2>Projeto Chalé Hotel (mini layout)</h2>
+            <p>Miniatura de layout com topo, menu lateral e área de conteúdo.</p>
+
+            <div class="chale-layout">
+                <header class="chale-topo">
+                    <h3>Chalé Hotel</h3>
+                    <p>Experiência única em hospedagem.</p>
+                </header>
+                <div class="chale-corpo">
+                    <nav class="chale-menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>O Chalé</li>
+                            <li>Suítes</li>
+                            <li>Reservas</li>
+                            <li>Contato</li>
+                        </ul>
+                    </nav>
+                    <section class="chale-conteudo">
+                        <h4>Bem-vindo ao Chalé Hotel</h4>
+                        <p>Texto de apresentação do hotel em uma coluna principal.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. Parallax -->
+        <section id="parallax" class="bloco">
+            <h2>Parallax</h2>
+            <p>Área com efeito parallax usando background fixo.</p>
+
+            <div class="parallax-demo">
+                <div class="parallax-fundo">
+                    <div class="parallax-conteudo">
+                        <h3>Seção Parallax</h3>
+                        <p>O fundo permanece fixo enquanto o conteúdo rola.</p>
+                    </div>
+                </div>
+                <p class="parallax-texto-depois">
+                    Texto após a seção parallax para mostrar o efeito de rolagem no contexto real da página.
+                </p>
+            </div>
+        </section>
+
+        <!-- 17. Fontes customizadas -->
+        <section id="fontes" class="bloco">
+            <h2>Fontes customizadas</h2>
+            <p>Exemplo de uso de duas fontes diferentes importadas via CSS.</p>
+
+            <p class="fonte-primaria">Este texto usa a fonte primária definida no CSS.</p>
+            <p class="fonte-secundaria">Este texto usa a fonte secundária, ideal para títulos.</p>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Resumo de módulos de CSS para estudo. Arquivo único HTML + CSS.</p>
+    </footer>
+
+</body>
+</html>

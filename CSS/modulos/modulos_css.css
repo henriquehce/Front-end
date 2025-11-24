@@ -1,0 +1,646 @@
+/* Importando fontes Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap');
+
+/* Reset simples */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base */
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* Topo */
+.topo {
+    background: linear-gradient(90deg, #1d4ed8, #111827);
+    color: #fff;
+    padding: 20px 16px;
+    margin-bottom: 24px;
+}
+
+.topo-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.topo h1 {
+    margin-bottom: 6px;
+}
+
+.topo p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Menu principal */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Container principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+}
+
+/* Blocos de seção */
+.bloco {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+}
+
+.bloco h2 {
+    margin-bottom: 6px;
+}
+
+.bloco p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* 1. Seletores */
+
+.demo-seletores {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.link-exemplo {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link-exemplo:hover {
+    text-decoration: underline;
+}
+
+.input-exemplo {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+/* Seletores de atributo */
+a[href*="login"] {
+    font-weight: bold;
+}
+
+a[href$=".pdf"] {
+    color: #b91c1c;
+}
+
+/* Pseudo-classe */
+.texto-seletor {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+}
+
+.texto-seletor:hover {
+    background-color: #cbd5e1;
+}
+
+/* Pseudo-elementos */
+.texto-before-after {
+    position: relative;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #f3e8ff;
+}
+
+.texto-before-after::before {
+    content: "Antes - ";
+    font-weight: bold;
+    color: #6b21a8;
+}
+
+.texto-before-after::after {
+    content: " - Depois";
+    font-weight: bold;
+    color: #6b21a8;
+}
+
+/* 2. Herança e especificidade */
+
+.caixa-heranca {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.caixa-heranca p {
+    margin-bottom: 6px;
+}
+
+/* Classe com mais peso que herança */
+.caixa-heranca .filho-especial {
+    color: #047857;
+}
+
+/* ID com mais peso que classe */
+#filho-id {
+    color: #b91c1c;
+}
+
+/* 3. Nav vertical */
+
+.nav-vertical {
+    display: inline-block;
+    width: 200px;
+    background-color: #111827;
+    color: #e5e7eb;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.nav-vertical h3 {
+    margin-bottom: 8px;
+}
+
+.nav-vertical ul {
+    list-style: none;
+}
+
+.nav-vertical li {
+    margin-bottom: 4px;
+}
+
+.nav-vertical a {
+    color: #e5e7eb;
+    text-decoration: none;
+    display: block;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.nav-vertical a:hover {
+    background-color: #374151;
+}
+
+/* 4. Página atual (nav horizontal simples) */
+
+.nav-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.nav-horizontal a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+    color: #111827;
+    font-size: 14px;
+}
+
+.nav-horizontal a:hover {
+    background-color: #cbd5e1;
+}
+
+.nav-horizontal a.ativo {
+    background-color: #1d4ed8;
+    color: #fff;
+}
+
+/* 5. Nav horizontal exemplo */
+
+.nav-horizontal-exemplo a {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.nav-horizontal-exemplo a:hover {
+    background-color: #1f2937;
+}
+
+/* 6. Abas */
+
+.abas {
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.abas-titulo {
+    display: flex;
+    background-color: #f3f4f6;
+}
+
+.aba {
+    flex: 1;
+    padding: 8px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.aba.ativa {
+    background-color: #ffffff;
+    border-bottom: 2px solid #1d4ed8;
+    font-weight: bold;
+}
+
+.abas-conteudo {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* 7. Layout fixo */
+
+.layout-fixo {
+    width: 800px;
+    max-width: 100%;
+    margin: 10px auto 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+}
+
+.layout-fixo header,
+.layout-fixo footer {
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 8px 10px;
+}
+
+.layout-fixo section {
+    padding: 10px;
+    background-color: #f9fafb;
+}
+
+/* 8. Layout líquido */
+
+.layout-liquido {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.layout-liquido aside {
+    flex: 0 0 25%;
+    background-color: #e5e7eb;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.layout-liquido section {
+    flex: 1;
+    background-color: #f9fafb;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .layout-liquido {
+        flex-direction: column;
+    }
+
+    .layout-liquido aside,
+    .layout-liquido section {
+        flex: 1 1 auto;
+    }
+}
+
+/* 9. Imagens líquidas (simuladas) */
+
+.linha-imagens {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.foto-box {
+    flex: 1 1 220px;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.foto-liquida {
+    width: 100%;
+    padding-top: 60%; /* proporção aproximada */
+    border-radius: 6px;
+    background-image: linear-gradient(135deg, #1d4ed8, #60a5fa);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 10. Coluna falsa */
+
+.coluna-falsa {
+    background: linear-gradient(to right, #e5e7eb 0, #e5e7eb 50%, #f9fafb 50%, #f9fafb 100%);
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.coluna-falsa .coluna {
+    flex: 1;
+    padding: 8px;
+}
+
+.coluna-falsa .esquerda p,
+.coluna-falsa .direita p {
+    margin-bottom: 6px;
+}
+
+.nota {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* 11. Tabelas */
+
+.tabela-estilizada {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.tabela-estilizada th,
+.tabela-estilizada td {
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.tabela-estilizada thead {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.tabela-estilizada tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+}
+
+.tabela-estilizada tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+/* 12. Formulários */
+
+.form-estilizado {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.form-estilizado label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-estilizado input,
+.form-estilizado select,
+.form-estilizado textarea {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+.form-estilizado input:focus,
+.form-estilizado select:focus,
+.form-estilizado textarea:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+}
+
+.form-estilizado button {
+    margin-top: 4px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #1d4ed8;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-estilizado button:hover {
+    background-color: #1e40af;
+}
+
+/* 13. Arredondamento */
+
+.caixa-arredondada {
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #e0f2fe;
+    border-radius: 16px;
+    border: 1px solid #93c5fd;
+    font-size: 14px;
+}
+
+/* 14. Projeto Notícias (mini) */
+
+.noticias-layout {
+    margin-top: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+}
+
+.noticias-topo {
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 8px 10px;
+}
+
+.noticias-nav {
+    display: flex;
+    gap: 8px;
+    padding: 6px 8px;
+    background-color: #1f2937;
+}
+
+.noticias-nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.noticias-nav a:hover {
+    text-decoration: underline;
+}
+
+.noticias-corpo {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.noticias-principal {
+    flex: 2;
+    background-color: #f9fafb;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.noticias-lateral {
+    flex: 1;
+    background-color: #f3f4f6;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.noticias-lateral ul {
+    list-style: disc;
+    padding-left: 18px;
+}
+
+@media (max-width: 768px) {
+    .noticias-corpo {
+        flex-direction: column;
+    }
+}
+
+/* 15. Projeto Chalé Hotel (mini) */
+
+.chale-layout {
+    margin-top: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+}
+
+.chale-topo {
+    background: linear-gradient(90deg, #92400e, #451a03);
+    color: #fef3c7;
+    padding: 10px;
+}
+
+.chale-corpo {
+    display: flex;
+    gap: 0;
+}
+
+.chale-menu {
+    flex: 0 0 180px;
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.chale-menu ul {
+    list-style: none;
+}
+
+.chale-menu li {
+    margin-bottom: 6px;
+}
+
+.chale-conteudo {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9fafb;
+}
+
+@media (max-width: 768px) {
+    .chale-corpo {
+        flex-direction: column;
+    }
+
+    .chale-menu {
+        flex: 1;
+    }
+}
+
+/* 16. Parallax */
+
+.parallax-demo {
+    margin-top: 8px;
+}
+
+.parallax-fundo {
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, #1d4ed8, #22c55e);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-conteudo {
+    background-color: rgba(15, 23, 42, 0.7);
+    color: #e5e7eb;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.parallax-texto-depois {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 17. Fontes customizadas */
+
+.fonte-primaria {
+    margin-top: 8px;
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.fonte-secundaria {
+    margin-top: 4px;
+    font-size: 20px;
+    font-family: 'Merriweather', 'Times New Roman', serif;
+}
+
+/* Rodapé */
+
+.rodape {
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #6b7280;
+}

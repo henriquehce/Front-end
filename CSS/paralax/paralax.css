@@ -1,0 +1,138 @@
+/* Reset simples */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+/* Topo */
+.topo {
+    background-color: #020617;
+    padding: 20px 16px;
+}
+
+.topo-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.topo h1 {
+    margin-bottom: 6px;
+}
+
+.topo p {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Seções gerais */
+.secao {
+    padding: 60px 16px;
+}
+
+.secao .conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.secao h2 {
+    margin-bottom: 10px;
+}
+
+.secao p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Variações de cor das seções normais */
+.secao-clara {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.secao-escura {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+
+.secao-final {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+/* Seções Parallax */
+.parallax {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Propriedades principais do efeito */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Parallax 1 - pode trocar por imagem depois */
+.parallax-1 {
+    /* Exemplo com gradiente */
+    background-image: linear-gradient(135deg, #1d4ed8, #22c55e);
+
+    background-image: url("../paralax/imagens/3636.jpg");
+    
+}
+
+/* Parallax 2 - pode trocar por imagem depois */
+.parallax-2 {
+    background-image: linear-gradient(135deg, #7c3aed, #ec4899);
+    background-image: url("../paralax/imagens/3636.jpg");
+    
+}
+
+/* Conteúdo sobre o fundo parallax */
+.parallax-overlay {
+    background-color: rgba(15, 23, 42, 0.7);
+    padding: 20px 26px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.parallax-overlay h2 {
+    margin-bottom: 8px;
+}
+
+.parallax-overlay p {
+    font-size: 14px;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #9ca3af;
+    background-color: #020617;
+}
+
+/* Ajuste simples para telas pequenas */
+@media (max-width: 768px) {
+    .parallax {
+        height: 220px;
+        background-attachment: scroll; /* melhora compatibilidade em mobile */
+    }
+
+    .parallax-overlay {
+        padding: 14px 16px;
+    }
+}
