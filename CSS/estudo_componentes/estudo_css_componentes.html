@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Componentes CSS</title>
+    <link rel="stylesheet" href="/CSS/estudo_componentes/estudo_css_componentes.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-conteudo">
+            <h1>Estudo de Componentes CSS</h1>
+            <p>Exemplos de tipografia, cores, botões, cartões, layouts, tabelas, formulários e efeitos.</p>
+
+            <nav class="menu">
+                <a href="#tipografia">Tipografia</a>
+                <a href="#cores">Cores</a>
+                <a href="#botoes">Botões</a>
+                <a href="#cards">Cards</a>
+                <a href="#layout">Layout (Flex e Grid)</a>
+                <a href="#tabela-form">Tabela e Formulário</a>
+                <a href="#efeitos">Efeitos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Tipografia -->
+        <section id="tipografia" class="bloco">
+            <h2>Tipografia</h2>
+            <p>Exemplos de tamanhos, pesos e estilos de fonte.</p>
+
+            <h1 class="demo-title">Título H1 de Exemplo</h1>
+            <h2 class="demo-title">Título H2 de Exemplo</h2>
+            <h3 class="demo-title">Título H3 de Exemplo</h3>
+
+            <p class="texto-normal">
+                Este é um parágrafo com texto padrão. O objetivo é mostrar o tamanho e espaçamento de linha.
+            </p>
+
+            <p class="texto-destaque">
+                Este é um parágrafo de destaque, com peso de fonte maior e cor diferente.
+            </p>
+
+            <p class="texto-menor">
+                Este é um texto menor, usado para observações ou notas de rodapé.
+            </p>
+        </section>
+
+        <!-- Cores -->
+        <section id="cores" class="bloco">
+            <h2>Cores</h2>
+            <p>Exemplos de combinações de cores aplicadas em caixas.</p>
+
+            <div class="paleta">
+                <div class="cor cor-primaria">Primária</div>
+                <div class="cor cor-secundaria">Secundária</div>
+                <div class="cor cor-sucesso">Sucesso</div>
+                <div class="cor cor-aviso">Aviso</div>
+                <div class="cor cor-erro">Erro</div>
+            </div>
+        </section>
+
+        <!-- Botões -->
+        <section id="botoes" class="bloco">
+            <h2>Botões</h2>
+            <p>Variações de botões com estados de hover e foco.</p>
+
+            <div class="grupo-botoes">
+                <button class="btn btn-primario">Principal</button>
+                <button class="btn btn-secundario">Secundário</button>
+                <button class="btn btn-sucesso">Sucesso</button>
+                <button class="btn btn-perigo">Perigo</button>
+                <button class="btn btn-texto">Texto simples</button>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section id="cards" class="bloco">
+            <h2>Cards</h2>
+            <p>Exemplo de cartões de conteúdo com título, texto e botão.</p>
+
+            <div class="grade-cards">
+                <article class="card">
+                    <h3>Card 1</h3>
+                    <p>Este é um exemplo de card. Pode ser usado para destacar informações importantes.</p>
+                    <button class="btn btn-primario">Saiba mais</button>
+                </article>
+
+                <article class="card">
+                    <h3>Card 2</h3>
+                    <p>Cards são úteis para organizar conteúdo em blocos visuais bem definidos.</p>
+                    <button class="btn btn-secundario">Detalhes</button>
+                </article>
+
+                <article class="card">
+                    <h3>Card 3</h3>
+                    <p>Você pode adicionar imagens, ícones ou qualquer outro elemento dentro de um card.</p>
+                    <button class="btn btn-sucesso">Ver mais</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Layout -->
+        <section id="layout" class="bloco">
+            <h2>Layout (Flex e Grid)</h2>
+            <p>Exemplos simples de uso de Flexbox e Grid.</p>
+
+            <h3>Layout com Flexbox</h3>
+            <div class="linha-flex">
+                <div class="item-flex">Item 1</div>
+                <div class="item-flex">Item 2</div>
+                <div class="item-flex">Item 3</div>
+            </div>
+
+            <h3>Layout com Grid</h3>
+            <div class="linha-grid">
+                <div class="item-grid">1</div>
+                <div class="item-grid">2</div>
+                <div class="item-grid">3</div>
+                <div class="item-grid">4</div>
+            </div>
+        </section>
+
+        <!-- Tabela e Formulário -->
+        <section id="tabela-form" class="bloco">
+            <h2>Tabela e Formulário</h2>
+
+            <div class="duas-colunas">
+                <div>
+                    <h3>Tabela Estilizada</h3>
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Nível</th>
+                                <th>Duração</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML e CSS</td>
+                                <td>Iniciante</td>
+                                <td>20h</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>Intermediário</td>
+                                <td>30h</td>
+                            </tr>
+                            <tr>
+                                <td>Desenvolvimento Web</td>
+                                <td>Completo</td>
+                                <td>60h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3>Formulário Estilizado</h3>
+                    <form class="formulario">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+
+                        <label for="area">Área de interesse</label>
+                        <select id="area" name="area">
+                            <option>Front-end</option>
+                            <option>Back-end</option>
+                            <option>Full Stack</option>
+                        </select>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+                        <button type="submit" class="btn btn-primario">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Efeitos -->
+        <section id="efeitos" class="bloco">
+            <h2>Efeitos (Transições, Transformações e Sombras)</h2>
+            <p>Passe o mouse sobre os elementos abaixo para ver os efeitos.</p>
+
+            <div class="linha-efeitos">
+                <div class="box-efeito sombra">
+                    Sombra
+                </div>
+                <div class="box-efeito transicao">
+                    Transição
+                </div>
+                <div class="box-efeito transformacao">
+                    Transformação
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Estudo de CSS – Componentes visuais para prática.</p>
+    </footer>
+
+</body>
+</html>

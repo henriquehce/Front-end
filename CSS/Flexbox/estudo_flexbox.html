@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Flexbox</title>
+    <link rel="stylesheet" href="/CSS/Flexbox/estudo_flexbox.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-conteudo">
+            <h1>Estudo de Flexbox</h1>
+            <p>Exemplos práticos de layouts utilizando apenas Flexbox.</p>
+
+            <nav class="menu">
+                <a href="#basico">Flex básico</a>
+                <a href="#alinhamento">Alinhamento</a>
+                <a href="#wrap">Quebra de linha (wrap)</a>
+                <a href="#layout-pagina">Layout de página</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="basico" class="bloco">
+            <h2>Flex básico</h2>
+            <p>Um container com itens distribuídos em uma linha usando <code>display: flex</code>.</p>
+
+            <div class="flex-demo flex-basico">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </section>
+
+        <section id="alinhamento" class="bloco">
+            <h2>Alinhamento horizontal e vertical</h2>
+            <p>Exemplos usando <code>justify-content</code> e <code>align-items</code>.</p>
+
+            <h3>Centralizado</h3>
+            <div class="flex-demo flex-centralizado">
+                <div class="item grande">Item centralizado</div>
+            </div>
+
+            <h3>Espaço entre os itens</h3>
+            <div class="flex-demo flex-space-between">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+            </div>
+
+            <h3>Alinhamento ao final</h3>
+            <div class="flex-demo flex-end">
+                <div class="item">X</div>
+                <div class="item">Y</div>
+            </div>
+        </section>
+
+        <section id="wrap" class="bloco">
+            <h2>Quebra de linha (flex-wrap)</h2>
+            <p>Quando não cabe tudo em uma linha, os itens podem quebrar para a linha de baixo.</p>
+
+            <div class="flex-demo flex-wrap-exemplo">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+                <div class="item">12</div>
+                <div class="item">13</div>
+                <div class="item">14</div>
+                <div class="item">15</div>
+                <div class="item">16</div>
+                <div class="item">17</div>
+                <div class="item">18</div>
+                <div class="item">19</div>
+                <div class="item">20</div>
+                <div class="item">21</div>
+                <div class="item">22</div>
+                <div class="item">23</div>
+                <div class="item">24</div>
+                <div class="item">25</div>
+                <div class="item">26</div>
+                <div class="item">27</div>
+                <div class="item">28</div>
+                <div class="item">29</div>
+            
+            </div>
+        </section>
+
+        <section id="layout-pagina" class="bloco">
+            <h2>Layout de página com Flexbox</h2>
+            <p>Exemplo de layout simples com barra lateral e conteúdo principal.</p>
+
+            <div class="layout-flex">
+                <aside class="sidebar">
+                    <h3>Menu lateral</h3>
+                    <ul>
+                        <li>Início</li>
+                        <li>Cursos</li>
+                        <li>Sobre</li>
+                        <li>Contato</li>
+                    </ul>
+                </aside>
+
+                <section class="conteudo">
+                    <h3>Área de conteúdo</h3>
+                    <p>
+                        Esta área representa o conteúdo principal da página. O layout usa Flexbox para organizar
+                        a sidebar à esquerda e o conteúdo à direita.
+                    </p>
+
+                    <div class="cards-flex">
+                        <div class="card">
+                            <h4>Card 1</h4>
+                            <p>Exemplo de card dentro do layout.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Card 2</h4>
+                            <p>Outro card para demonstrar o alinhamento.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Card 3</h4>
+                            <p>Mais um card dentro do container flex.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- Comparação Flexbox x Grid -->
+        <section class="bloco">
+            <h2>Comparação: Flexbox x Grid</h2>
+            <p>Aqui temos 4 quadrados médios organizados em 2x2, primeiro usando Flexbox e depois usando Grid.</p>
+
+            <!-- FLEXBOX -->
+            <h3>Versão com Flexbox</h3>
+            <div class="flex-4">
+                <div class="quad">1</div>
+                <div class="quad">2</div>
+                <div class="quad">3</div>
+                <div class="quad">4</div>
+            </div>
+
+            <br><br>
+
+            <!-- GRID -->
+            <h3>Versão com Grid</h3>
+            <div class="grid-4">
+                <div class="quad">1</div>
+                <div class="quad">2</div>
+                <div class="quad">3</div>
+                <div class="quad">4</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Estudo de Flexbox – Página dedicada a layouts usando flex.</p>
+    </footer>
+
+</body>
+</html>
