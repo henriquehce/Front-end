@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página exemplo com elementos HTML básicos e intermediários.">
+    <title>Exemplo Completo de HTML</title>
+</head>
+<body>
+
+    <!-- =========================================
+         1. CABEÇALHO E NAVEGAÇÃO
+    ========================================== -->
+    <header id="topo">
+        <h1>Exemplo Completo de HTML (Sem CSS)</h1>
+        <p>Esta página demonstra diversos elementos do HTML, do básico ao intermediário.</p>
+
+        <nav>
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="#texto">Textos e Formatações</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#imagens-links">Imagens e Links</a></li>
+                <li><a href="#tabelas">Tabelas</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+                <li><a href="#caracteres">Caracteres Especiais</a></li>
+                <li><a href="#midia-semantica">Mídia e Tags Semânticas</a></li>
+                <li><a href="#scripts">Scripts</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- =========================================
+         2. TEXTOS E FORMATAÇÕES
+    ========================================== -->
+    <main>
+
+        <section id="texto">
+            <header>
+                <h2>Textos e Formatações</h2>
+            </header>
+
+            <article>
+                <h3>Cabeçalhos</h3>
+                <p>Abaixo temos títulos de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>:</p>
+                <h1>Exemplo H1</h1>
+                <h2>Exemplo H2</h2>
+                <h3>Exemplo H3</h3>
+                <h4>Exemplo H4</h4>
+                <h5>Exemplo H5</h5>
+                <h6>Exemplo H6</h6>
+            </article>
+
+            <article>
+                <h3>Parágrafos e Quebras</h3>
+                <p>Este é um parágrafo de exemplo. Podemos usar <br> quebras de linha quando necessário.</p>
+                <p>Também podemos usar uma linha horizontal para separar seções:</p>
+                <hr>
+            </article>
+
+            <article>
+                <h3>Formatação de Texto</h3>
+                <p>
+                    <strong>Negrito (semântico)</strong>,
+                    <b>negrito (visual)</b>, 
+                    <em>itálico (semântico)</em>,
+                    <i>itálico (visual)</i>,
+                    <u>sublinhado</u>,
+                    <mark>texto marcado</mark>,
+                    <small>texto menor</small>,
+                    <del>texto removido</del>,
+                    <ins>texto inserido</ins>.
+                </p>
+
+                <p>Podemos usar <code>&lt;code&gt;</code> para código inline, como <code>console.log("Olá")</code>.</p>
+
+                <p>Bloco de código com <code>&lt;pre&gt;</code>:</p>
+                <pre>
+function somar(a, b) {
+    return a + b;
+}
+console.log(somar(2, 3));
+                </pre>
+            </article>
+        </section>
+
+        <!-- =========================================
+             3. LISTAS
+        ========================================== -->
+        <section id="listas">
+            <header>
+                <h2>Listas</h2>
+            </header>
+
+            <article>
+                <h3>Lista Não Ordenada (ul)</h3>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Lista Ordenada (ol)</h3>
+                <ol>
+                    <li>Primeiro passo</li>
+                    <li>Segundo passo</li>
+                    <li>Terceiro passo</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Lista de Descrição (dl)</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Linguagem de marcação para estruturar páginas web.</dd>
+
+                    <dt>CSS</dt>
+                    <dd>Linguagem de estilo para definir aparência das páginas (não usada aqui).</dd>
+                </dl>
+            </article>
+        </section>
+
+        <!-- =========================================
+             4. IMAGENS E LINKS
+        ========================================== -->
+        <section id="imagens-links">
+            <header>
+                <h2>Imagens e Links</h2>
+            </header>
+
+            <article>
+                <h3>Imagem Simples</h3>
+                <p>
+                    Exemplo de imagem (use um arquivo local ou uma URL válida):
+                </p>
+                    <img src="images/imagem.jpg" alt="Imagem de estudo">
+                <p>
+                    Atributos comuns: <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code>, <code>title</code>.
+                </p>
+            </article>
+
+            <article>
+                <h3>Links</h3>
+                <p>
+                    Link para outra página: 
+                    <a href="https://www.example.com">Visitar Example.com</a>
+                </p>
+                <p>
+                    Link abrindo em nova aba:
+                    <a href="https://www.example.com" target="_blank" rel="noopener">Abrir Example.com em nova aba</a>
+                </p>
+                <p>
+                    Link para seção interna:
+                    <a href="#topo">Voltar ao topo da página</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- =========================================
+             5. TABELAS
+        ========================================== -->
+        <section id="tabelas">
+            <header>
+                <h2>Tabelas</h2>
+            </header>
+
+            <article>
+                <h3>Tabela Completa</h3>
+                <table border="1">
+                    <caption>Exemplo de Tabela de Produtos</caption>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>10</td>
+                            <td>50,00</td>
+                        </tr>
+                        <tr>
+                            <td>Teclado</td>
+                            <td>5</td>
+                            <td>120,00</td>
+                        </tr>
+                        <tr>
+                            <td>Monitor</td>
+                            <td>2</td>
+                            <td>900,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total de Itens</td>
+                            <td>17</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+
+        <!-- =========================================
+             6. FORMULÁRIOS
+        ========================================== -->
+        <section id="formularios">
+            <header>
+                <h2>Formulários</h2>
+            </header>
+
+            <article>
+                <h3>Formulário Completo</h3>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        <br><br>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+                        <br><br>
+
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                        <br><br>
+
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="0" max="120">
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferências</legend>
+
+                        <p>Gênero musical favorito:</p>
+                        <label>
+                            <input type="radio" name="musica" value="rock" checked> Rock
+                        </label>
+                        <label>
+                            <input type="radio" name="musica" value="pop"> Pop
+                        </label>
+                        <label>
+                            <input type="radio" name="musica" value="eletronica"> Eletrônica
+                        </label>
+                        <br><br>
+
+                        <p>Interesses:</p>
+                        <label>
+                            <input type="checkbox" name="interesses" value="programacao"> Programação
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interesses" value="design"> Design
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interesses" value="jogos"> Jogos
+                        </label>
+                        <br><br>
+
+                        <label for="cor">Escolha uma cor favorita:</label>
+                        <input type="color" id="cor" name="cor">
+                        <br><br>
+
+                        <label for="nivel">Nível de satisfação (0 a 10):</label>
+                        <input type="range" id="nivel" name="nivel" min="0" max="10">
+                        <br><br>
+
+                        <label for="data">Data de nascimento:</label>
+                        <input type="date" id="data" name="data">
+                        <br><br>
+
+                        <label for="cidade">Cidade:</label>
+                        <select id="cidade" name="cidade">
+                            <option value="">Selecione...</option>
+                            <optgroup label="Brasil">
+                                <option value="sp">São Paulo</option>
+                                <option value="rj">Rio de Janeiro</option>
+                                <option value="floripa">Florianópolis</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Mensagem</legend>
+                        <label for="mensagem">Digite sua mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" rows="5" cols="40" placeholder="Escreva algo..."></textarea>
+                    </fieldset>
+
+                    <br>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </form>
+            </article>
+        </section>
+
+        <!-- =========================================
+             7. CARACTERES ESPECIAIS
+        ========================================== -->
+        <section id="caracteres">
+            <header>
+                <h2>Caracteres Especiais</h2>
+            </header>
+
+            <p>Exemplos de entidades HTML:</p>
+            <ul>
+                <li>Espaço não separável: <code>&amp;nbsp;</code> =&gt; &nbsp;teste</li>
+                <li>Sinal menor: <code>&amp;lt;</code> =&gt; &lt;</li>
+                <li>Sinal maior: <code>&amp;gt;</code> =&gt; &gt;</li>
+                <li>E comercial: <code>&amp;amp;</code> =&gt; &amp;</li>
+                <li>Copyright: <code>&amp;copy;</code> =&gt; &copy;</li>
+                <li>Registrado: <code>&amp;reg;</code> =&gt; &reg;</li>
+                <li>Euro: <code>&amp;euro;</code> =&gt; &euro;</li>
+                <li>Aspas duplas: <code>&amp;quot;</code> =&gt; &quot;</li>
+                <li>Aspas simples: <code>&amp;#39;</code> =&gt; &#39;</li>
+            </ul>
+        </section>
+
+        <!-- =========================================
+             8. MÍDIA E TAGS SEMÂNTICAS
+        ========================================== -->
+        <section id="midia-semantica">
+            <header>
+                <h2>Mídia e Tags Semânticas</h2>
+            </header>
+
+            <article>
+                <h3>Figura com Legenda</h3>
+                <figure>
+                    <img src="/html/images/imagem.jpg" alt="Imagem de uma paisagem">
+                    <figcaption>Figura 1: Exemplo de paisagem com figcaption.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Áudio</h3>
+                <audio controls>
+                    <source src="/html/audio/audio.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </article>
+
+            <article>
+                <h3>Vídeo</h3>
+                <video controls width="320" height="240">
+                    <source src="video-exemplo.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </article>
+
+            <article>
+                <h3>Iframe</h3>
+                <p>Exemplo de iframe (poderia ser um mapa, vídeo do YouTube, etc.):</p>
+                <iframe src="https://images.google.com/?hl=pt-br" width="400" height="200" title="Iframe de exemplo">
+                    Seu navegador não suporta iframes.
+                </iframe>
+            </article>
+
+            <aside>
+                <h3>Aside (Conteúdo Lateral)</h3>
+                <p>Este é um bloco <code>&lt;aside&gt;</code>, geralmente usado para conteúdos relacionados, como notas, links extras, etc.</p>
+            </aside>
+        </section>
+
+        <!-- =========================================
+             9. SCRIPTS E COMENTÁRIOS
+        ========================================== -->
+        <section id="scripts">
+            <header>
+                <h2>Scripts e Comentários</h2>
+            </header>
+
+            <p>Exemplo de comentário em HTML:</p>
+            <!-- Este é um comentário que não aparece na página -->
+
+            <p>Exemplo simples de script JavaScript:</p>
+            <script>
+                // Este script apenas exibe uma mensagem no console do navegador.
+                console.log("Página de exemplo HTML carregada.");
+            </script>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         10. RODAPÉ
+    ========================================== -->
+    <footer>
+        <p>&copy; 2025 - Página de Exemplo HTML. Todos os direitos reservados.</p>
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </footer>
+
+</body>
+</html>
