@@ -1,0 +1,34 @@
+/* style.css
+   Customizações leves para a página de revisão de Bootstrap
+*/
+
+/* Hero com efeito parallax simples */
+.hero-parallax {
+  min-height: 60vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://images.pexels.com/photos/7214460/pexels-photo-7214460.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Texto do grid demo mais "bonitinho" */
+.demo-grid-text .border {
+  background-color: #f8f9fa;
+}
+
+/* Pequeno ajuste de espaçamento geral */
+section h2 {
+  font-weight: 700;
+}
+
+/* Em telas muito pequenas, melhora a leitura no hero */
+@media (max-width: 576px) {
+  .hero-parallax {
+    min-height: 70vh;
+    background-attachment: scroll; /* evita lag em mobile */
+  }
+}

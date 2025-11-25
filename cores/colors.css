@@ -1,0 +1,144 @@
+/* colors.css
+   Paleta de cores e utilitários de cor para o projeto
+*/
+
+/* ===========================
+   PALETA BASE (CSS VARIABLES)
+   =========================== */
+
+:root {
+  /* Cores principais do tema */
+  --color-primary:   #6d00ff;
+  --color-primary-soft: #a066ff;
+  --color-secondary: #00b894;
+  --color-accent:    #ffba08;
+
+  /* Cores de feedback */
+  --color-success:   #28a745;
+  --color-danger:    #dc3545;
+  --color-warning:   #ffc107;
+  --color-info:      #17a2b8;
+
+  /* Neutros */
+  --color-dark:      #212529;
+  --color-muted:     #6c757d;
+  --color-light:     #f8f9fa;
+  --color-white:     #ffffff;
+  --color-black:     #000000;
+}
+
+/* ===========================
+   TEXTO
+   =========================== */
+
+/* Texto com cores do tema */
+.text-primary-app   { color: var(--color-primary) !important; }
+.text-primary-soft  { color: var(--color-primary-soft) !important; }
+.text-secondary-app { color: var(--color-secondary) !important; }
+.text-accent        { color: var(--color-accent) !important; }
+
+.text-success-app   { color: var(--color-success) !important; }
+.text-danger-app    { color: var(--color-danger) !important; }
+.text-warning-app   { color: var(--color-warning) !important; }
+.text-info-app      { color: var(--color-info) !important; }
+
+/* Texto neutro */
+.text-dark-app   { color: var(--color-dark) !important; }
+.text-muted-app  { color: var(--color-muted) !important; }
+.text-light-app  { color: var(--color-light) !important; }
+.text-white-app  { color: var(--color-white) !important; }
+
+/* ===========================
+   FUNDOS (BACKGROUND)
+   =========================== */
+
+.bg-primary-app   { background-color: var(--color-primary) !important; }
+.bg-primary-soft  { background-color: var(--color-primary-soft) !important; }
+.bg-secondary-app { background-color: var(--color-secondary) !important; }
+.bg-accent        { background-color: var(--color-accent) !important; }
+
+.bg-success-app   { background-color: var(--color-success) !important; }
+.bg-danger-app    { background-color: var(--color-danger) !important; }
+.bg-warning-app   { background-color: var(--color-warning) !important; }
+.bg-info-app      { background-color: var(--color-info) !important; }
+
+.bg-dark-app   { background-color: var(--color-dark) !important; }
+.bg-muted-app  { background-color: var(--color-muted) !important; }
+.bg-light-app  { background-color: var(--color-light) !important; }
+.bg-black-app  { background-color: var(--color-black) !important; }
+.bg-white-app  { background-color: var(--color-white) !important; }
+
+/* Combos prontos de fundo + texto */
+.bg-primary-card {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.bg-soft-section {
+  background: linear-gradient(
+    135deg,
+    rgba(109, 0, 255, 0.08),
+    rgba(0, 184, 148, 0.08)
+  );
+}
+
+/* ===========================
+   BORDAS
+   =========================== */
+
+.border-primary-app   { border-color: var(--color-primary) !important; }
+.border-secondary-app { border-color: var(--color-secondary) !important; }
+.border-accent        { border-color: var(--color-accent) !important; }
+
+.border-success-app   { border-color: var(--color-success) !important; }
+.border-danger-app    { border-color: var(--color-danger) !important; }
+.border-warning-app   { border-color: var(--color-warning) !important; }
+.border-info-app      { border-color: var(--color-info) !important; }
+
+.border-dark-app      { border-color: var(--color-dark) !important; }
+.border-light-app     { border-color: var(--color-light) !important; }
+
+/* ===========================
+   OVERRIDES OPCIONAIS DO BOOTSTRAP
+   (use se quiser que o site inteiro
+    siga essa paleta)
+   =========================== */
+
+/* Botões padrão do Bootstrap com suas cores do tema */
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-primary-soft) !important;
+  border-color: var(--color-primary-soft) !important;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-soft);
+}
+
+/* ===========================
+   EXEMPLOS DE UTILIZAÇÃO
+   (comentários só para referência)
+   =========================== */
+
+/*
+  <div class="bg-primary-app text-white-app p-3">
+    Caixa com fundo roxo principal e texto branco
+  </div>
+
+  <h1 class="text-secondary-app">Título com cor secundária</h1>
+
+  <div class="border border-accent p-3">
+    Borda com a cor de destaque
+  </div>
+*/
+/* Fim de colors.css */
