@@ -1,8 +1,8 @@
 export default function CriarConta() {
   return (
-    <div style={{ padding: "60px", color: "white" }}>
+    <div style={{ padding: 50 }}>
       <h1>Criar Conta</h1>
-      <p>(Aqui vai o formulário de cadastro)</p>
+      <p>Formulário ainda será criado.</p>
     </div>
   );
 }

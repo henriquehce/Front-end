@@ -1,37 +1,59 @@
 .hero {
-  height: 70vh;
-  background-image: url("/hero.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("/hero.png");
   background-size: cover;
   background-position: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 .overlay {
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  gap: 20px;
+  color: white;
+  max-width: 90%;
 }
 
-.storeButton {
-  background: white;
-  color: black;
-  padding: 12px 20px;
+.content h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.button img {
+  width: 220px;
+  max-width: 80%;
   border-radius: 10px;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  transition: 0.2s;
+  background: white;
+  padding: 0.5rem 0.8rem;
+  transition: 0.2s ease;
 }
 
-.storeButton:hover {
+.button img:hover {
   transform: scale(1.05);
+}
+
+.direct {
+  display: block;
+  color: #ddd;
+  margin-top: 1rem;
+  text-decoration: underline;
+  font-size: 0.9rem;
 }

@@ -1,0 +1,22 @@
+.devices {
+  position: relative;
+  background-image: url("/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+}
+
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+}

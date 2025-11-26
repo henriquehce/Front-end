@@ -1,8 +1,8 @@
 export default function Login() {
   return (
-    <div style={{ padding: "60px", color: "white" }}>
-      <h1>Entrar</h1>
-      <p>(Aqui vai o formulário de login futuramente)</p>
+    <div style={{ padding: 50 }}>
+      <h1>Acessar Conta</h1>
+      <p>Login funcional você implementa depois 😎</p>
     </div>
   );
 }
